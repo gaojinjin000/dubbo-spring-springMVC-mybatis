@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/neoway-api/api.iml" filepath="$PROJECT_DIR$/neoway-api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neoway-coommon/common.iml" filepath="$PROJECT_DIR$/neoway-coommon/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neoway-entity/entity.iml" filepath="$PROJECT_DIR$/neoway-entity/entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neo.iml" filepath="$PROJECT_DIR$/neo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neoway-web/neoway-web.iml" filepath="$PROJECT_DIR$/neoway-web/neoway-web.iml" />
+    </modules>
+  </component>
+</project>

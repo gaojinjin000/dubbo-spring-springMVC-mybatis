@@ -1,0 +1,4 @@
+neoway-api:dubbo需要暴露的接口
+neoway-common:公共的实体类
+neoway-entity:需要暴露的接口的实现和mybatis与数据库的交互
+neoway-web:调用dubbo暴露出来的接口

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neo.dao.NeoStudentMapper">
+    <resultMap id="BaseResultMap" type="com.neo.common.model.Student">
+        <result column="neo_id" property="id" jdbcType="INTEGER"/>
+        <result column="neo_name" property="name" jdbcType="VARCHAR"/>
+        <result column="neo_sal" property="sal" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="findAllStudents" resultMap="BaseResultMap">
+        SELECT * FROM neo_student
+    </select>
+
+    <select id="findById" parameterType="Integer" resultMap="BaseResultMap">
+        select * from neo_student WHERE neo_id=#{id}
+    </select>
+
+    <delete id="deleteStudent" parameterType="Integer">
+        DELETE FROM neo_student WHERE neo_id=#{id}
+    </delete>
+
+    <insert id="addStudent" parameterType="com.neo.common.model.Student">
+        INSERT INTO neo_student(neo_id,neo_name,neo_sal) VALUES (#{id},#{name},#{sal})
+    </insert>
+
+    <update id="updateStudent" parameterType="com.neo.common.model.Student">
+        UPDATE neo_student SET neo_name=#{name},neo_sal=#{sal} WHERE neo_id=#{id}
+    </update>
+
+    <select id="getMaxId" resultType="int">
+        SELECT MAX(neo_id) FROM neo_student
+    </select>
+
+</mapper>
